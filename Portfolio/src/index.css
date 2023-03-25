@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base{
+  body{
+    @apply font-[Barlow]
+  }
+  li{
+    @apply px-4;
+    @apply cursor-pointer
+  }
+}
 .HomeLogo{
   width: 90px;
 }
