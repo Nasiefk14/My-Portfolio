@@ -32,7 +32,6 @@ const Navbar = () => {
         <li className="py-5 text-1xl">Contact</li>
         <li className="py-5 text-1xl">Resume</li>
       </ul>
-      <div className="hidden"></div>
     </div>
   );
 };
