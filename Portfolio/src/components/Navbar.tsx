@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from '../assets/Logo.png';
+import Logo from "../assets/Logo.jpeg";
 import { Spin as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
