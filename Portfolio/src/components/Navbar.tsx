@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/Logo.png";
+import Logo from '../assets/react.svg';
 import { Spin as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#05386B] text-[#5CDB95]">
       <div>
-        <img src={logo} alt="Home Logo" className={` ${nav ? "blur-sm" : ""} w-[75px]`}/>
+        <img src={Logo} alt="Home Logo" className={` ${nav ? "blur-sm" : ""} w-[75px]`}/>
       </div>
       <ul className="hidden md:flex">
         <li>About</li>
