@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from '../assets/react.svg';
+import Logo from '../assets/Logo.png';
 import { Spin as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
       <div>
         <img src={Logo} alt="Home Logo" className={` ${nav ? "blur-sm" : ""} w-[75px]`}/>
       </div>
-      <ul className="hidden md:flex">
+      <ul className="hidden">
         <li>About</li>
         <li>Experience</li>
         <li>Work</li>
