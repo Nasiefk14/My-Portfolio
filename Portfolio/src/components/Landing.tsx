@@ -12,10 +12,7 @@ const Landing = () => {
           className="text-4xl sm:text-7xl font-bold text-[#edf5e1]"
           strings={["I am a Software Developer!"]}
           typeSpeed={80}
-          backSpeed={100}
           showCursor={false}
-          loop
-          loopCount={3}
         />
         <p className="text-[#edf5e1] py-4 max-w-[700px]">
           I am Javascript Developer With A Focus On The Front &
@@ -24,9 +21,11 @@ const Landing = () => {
           Talk Is Cheap, Let Me Rather Show You The Code ...
         </p>
         <div>
-          <button className="text-[#edf5e1] border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5CDB95] border-[#5CDB95] hover:text-[#05386b] hover:font-bold">
-           &lt;button value="Click Me!" /&gt;
-          </button>
+          <a href="https://www.linkedin.com/in/shaakira-abrahams-7374b2189/">
+            <button className="text-[#edf5e1] border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5CDB95] border-[#5CDB95] hover:text-[#05386b] hover:font-bold">
+              &lt;button value="Click Me!" /&gt;
+            </button>
+          </a>
         </div>
       </div>
     </div>
