@@ -11,7 +11,7 @@ const Navbar = () => {
       <div>
         <img src={Logo} alt="Home Logo" className={` ${nav ? "blur-sm" : ""} w-[75px]`}/>
       </div>
-      <ul className="hidden">
+      <ul className="hidden md:flex">
         <li>About</li>
         <li>Experience</li>
         <li>Work</li>
