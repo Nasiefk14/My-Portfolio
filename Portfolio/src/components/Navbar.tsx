@@ -7,7 +7,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#05386B] text-[#5CDB95]">
+    <div className="fixed w-full h-[100px] flex justify-between items-center px-4 bg-[#05386B] text-[#5CDB95]">
       <div>
         <img src={Logo} alt="Home Logo" className={` ${nav ? "blur-sm" : ""} w-[75px]`}/>
       </div>
