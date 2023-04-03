@@ -2,7 +2,7 @@ import Typed from "react-typed";
 
 const Landing = () => {
   return (
-    <div className="w-full h-screen bg-[#05386B]">
+    <div className="landing w-full h-screen bg-[#05386B]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-l">
         <p className="text-[#379683] text-xl">Hi, my name is</p>
         <h1 className="text-4xl sm:text-7xl font-bold text-[#5CDB95] strangeFont">
