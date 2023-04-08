@@ -1,4 +1,5 @@
 import About from './components/About'
+import Code from './components/Code'
 import Landing from './components/Landing'
 import Navbar from './components/Navbar'
 
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Landing />
       <About />
+      <Code />
     </div>
   )
 }
