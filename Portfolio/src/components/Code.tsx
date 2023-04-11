@@ -1,5 +1,6 @@
 import Todo from "../assets/Todo.jpeg";
-import box from "../assets/box.jpg";
+import Chat from "../assets/Chat.jpeg";
+import Portfolio from "../assets/Portfolio.jpeg";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const Code = () => {
@@ -14,18 +15,18 @@ const Code = () => {
             Have a look at some of some of my work highlights
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-4">
+        <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-6">
           <div
             style={{ backgroundImage: `url(${Todo})` }}
             className="shadow-lg shadow-[#5CDB95] group container rounded-md 
-                flex justify-center text-center items-center mx-auto blur-bg"
+                flex justify-center text-center items-center mx-auto main-nav"
           >
-            <div className="opacity-0 group-hover:opacity-100 hover:backdrop-blur-xl">
-              <span className="text-3xl font-bold text-[#05386B] tracking-wider texting">
+            <div className="opacity-0 group-hover:opacity-100 overlay">
+              <span className="text-4xl font-bold text-white tracking-wider ">
                 Todo App
               </span>
               <div className=" text-center ">
-                <a href="">
+              <a href="https://react-todo-7dce0.web.app" target="_blank">
                   <button
                     className="text-center rounded-lg px-5 py-3 m-2
                             text-[#5CDB95] font-bold text-7xl"
@@ -45,14 +46,61 @@ const Code = () => {
             </div>
           </div>
           <div
-            className="shadow-lg shadow-[#5CDB95] container rounded-md 
-                flex justify-center text-center items-center mx-auto opacity-5% blur-bg hover:bg-opacity-50"
+            style={{ backgroundImage: `url(${Chat})` }}
+            className="shadow-lg shadow-[#5CDB95] group container rounded-md 
+                flex justify-center text-center items-center mx-auto main-nav"
           >
-            <div
-              className="containerNow w-full h-full bg-[url('https://cdn.shopify.com/s/files/1/0562/4725/5202/products/STUARCHSTRAPBACKCAP_2_84091b45-9217-4103-b48d-b18bb982f673.jpg?v=1678975096')] "
-            >
-              {" "}
-              TODO
+            <div className="opacity-0 group-hover:opacity-100 overlay">
+              <span className="text-4xl font-bold text-white tracking-wider ">
+                Realtime Chat App
+              </span>
+              <div className=" text-center ">
+                <a href="">
+                  <button
+                    className="text-center rounded-lg px-5 py-3 m-2
+                            text-[#5CDB95] font-bold text-7xl"
+                  >
+                    <FiGithub />
+                  </button>
+                </a>
+                <a href="https://chatapp-d3259.web.app/" target="_blank">
+                  <button
+                    className="text-center rounded-lg px-5 py-3 m-2
+                        text-[#5CDB95] font-bold text-7xl"
+                  >
+                    <FiExternalLink />
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{ backgroundImage: `url(${Portfolio})` }}
+            className="shadow-lg shadow-[#5CDB95] group container rounded-md 
+                flex justify-center text-center items-center mx-auto main-nav col-span-2"
+          >
+            <div className="opacity-0 group-hover:opacity-100 overlay">
+              <span className="text-4xl font-bold text-white tracking-wider ">
+                Portfolio
+              </span>
+              <div className=" text-center ">
+                <a href="">
+                  <button
+                    className="text-center rounded-lg px-5 py-3 m-2
+                            text-[#5CDB95] font-bold text-7xl"
+                  >
+                    <FiGithub />
+                  </button>
+                </a>
+                <a href="https://nasief-khan.vercel.app/" target="_blank">
+                  <button
+                    className="text-center rounded-lg px-5 py-3 m-2
+                        text-[#5CDB95] font-bold text-7xl"
+                  >
+                    <FiExternalLink />
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
