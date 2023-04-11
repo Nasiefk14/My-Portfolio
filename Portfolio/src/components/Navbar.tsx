@@ -15,8 +15,8 @@ const Navbar = () => {
       </div>
       <ul className="hidden md:flex text-[#edf5e1] ">
         <li className="hover:text-[#5CDB95]"><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li className="hover:text-[#5CDB95]">&lt;Code/&gt;</li>
-        <li className="hover:text-[#5CDB95]">Contact</li>
+        <li className="hover:text-[#5CDB95]"><Link to="code" smooth={true} duration={500}>&lt;Code/&gt;</Link></li>
+        <li className="hover:text-[#5CDB95]"><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
         <li className="hover:text-[#5CDB95]">CV</li>
       </ul>
       <div onClick={handleClick} className="md:hidden z-10">
