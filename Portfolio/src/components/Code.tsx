@@ -5,8 +5,8 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const Code = () => {
   return (
-    <div className="code w-full h-screen text-[#edf5e1] bg-[#05386B]">
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center">
+    <div className="code w-full h-screen text-[#edf5e1] bg-[#05386B] pt-50">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-5xl font-bold inline border-b-4 text-[#edf5e1] border-[#5CDB95]">
             Code
@@ -80,7 +80,7 @@ const Code = () => {
                 flex justify-center text-center items-center mx-auto main-nav  sm:h-[350px] h-[200px] col-span-2"
           >
             <div className="opacity-0 group-hover:opacity-100 overlay">
-              <span className="text-3xl sm:text-5xl font-bold text-white tracking-wider ">
+              <span className="text-3xl sm:text-5xl font-bold text-white tracking-wider">
                 Portfolio
               </span>
               <div className="-mt-8 sm:mt-0 text-center ">
@@ -94,7 +94,7 @@ const Code = () => {
                 </a>
                 <a href="https://nasief-khan.vercel.app/" target="_blank">
                   <button
-                    className="text-center rounded-lg px-4 py-3 m-2
+                    className="code text-center rounded-lg px-4 py-3 m-2
                         text-[#5CDB95] font-bold sm:text-7xl text-3xl"
                   >
                     <FiExternalLink />

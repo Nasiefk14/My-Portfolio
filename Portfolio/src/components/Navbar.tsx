@@ -28,8 +28,8 @@ const Navbar = () => {
         }`}
       >
         <li className="py-5 text-1xl"><Link to="about" smooth={true} duration={500} onClick={handleClick}>About</Link></li>
-        <li className="py-5 text-1xl"><Link to="about" smooth={true} duration={500} onClick={handleClick}>&lt;Code/&gt;</Link></li>
-        <li className="py-5 text-1xl"><Link to="about" smooth={true} duration={500} onClick={handleClick}>Contact</Link></li>
+        <li className="py-5 text-1xl"><Link to="code" smooth={true} duration={500} onClick={handleClick}>&lt;Code/&gt;</Link></li>
+        <li className="py-5 text-1xl"><Link to="contact" smooth={true} duration={500} onClick={handleClick}>Contact</Link></li>
         <li className="py-5 text-1xl">CV</li>
       </ul>
     </div>
