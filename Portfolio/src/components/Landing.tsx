@@ -1,9 +1,6 @@
 import Typed from "react-typed";
 
 const Landing = () => {
-  function myFunction() {
-    alert("NELSON YOU BITCH! ༼ つ ◕_◕ ༽つ");
-  }
   return (
     <div className="landing w-full h-screen bg-[#05386B]">
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full text-l">
@@ -24,7 +21,7 @@ const Landing = () => {
           Talk Is Cheap, Let Me Rather Show You The Code ...
         </p>
         <div>
-            <button onClick={myFunction} className="text-[#edf5e1] border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5CDB95] border-[#5CDB95] hover:text-[#05386b] hover:font-bold">
+            <button className="text-[#edf5e1] border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5CDB95] border-[#5CDB95] hover:text-[#05386b] hover:font-bold">
               &lt;button value="Click Me!" /&gt;
             </button>
         </div>
