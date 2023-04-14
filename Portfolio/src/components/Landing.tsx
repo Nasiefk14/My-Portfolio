@@ -20,11 +20,6 @@ const Landing = () => {
           Familar Then Maybe Your Right😅 But Come On In & Have A Look Because
           Talk Is Cheap, Let Me Rather Show You The Code ...
         </p>
-        <div>
-            <button className="text-[#edf5e1] border-2 px-6 py-3 my-2 flex items-center hover:bg-[#5CDB95] border-[#5CDB95] hover:text-[#05386b] hover:font-bold">
-              &lt;button value="Click Me!" /&gt;
-            </button>
-        </div>
       </div>
     </div>
   );
