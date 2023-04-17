@@ -1,39 +1,29 @@
+import me from '../assets/me.jpeg'
+
 const About = () => {
   return (
-    <div className="about w-full h-screen bg-[#05386B] text-[#edf5e1]">
+    <div className="about w-full h-full bg-[#05386B] text-[#edf5e1] pt-28">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
-            <p className="text-5xl font-bold inline border-b-4 border-[#5CDB95]">
+            <p className="sm:text-5xl text-3xl font-bold inline border-b-4 border-[#5CDB95]">
               About Me
             </p>
           </div>
           <div></div>
         </div>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold">
-            <p>
-              Hi Again! Please Have a Look Around & Try To Break Something I
-              Dare You XD
+          <div className="sm:text-right text-4xl">
+            <p className='text-base'>
+            Hello, I'm Nasief Khan, a skilled Javascript developer with a passion for web development. With over 4 years of experience in software development, I have a solid foundation in C# and have since shifted my focus to Javascript and Typescript. I have honed my skills through building a variety of web applications and projects, and I am constantly seeking to learn and master new, in-demand technologies.
+<br /><br />
+On this website, you'll find a small preview of my abilities and projects that I have built. My main focus is currently on Fullstack Development, where I aim to strengthen my skills and work with the latest technologies. I am committed to creating high-quality, functional, and visually appealing web applications.
+<br /><br />
+Thank you for visiting my website, and please feel free to reach out to me with any questions or inquiries
             </p>
           </div>
           <div>
-            <p>
-              {/* Hello! My name is Brittany and I enjoy creating things that live
-              on the internet. My interest in web development started back in
-              2012 when I decided to try editing custom Tumblr themes — turns
-              out hacking together a custom reblog button taught me a lot about
-              HTML & CSS! Fast-forward to today, and I’ve had the privilege of
-              working at an advertising agency, a start-up, a huge corporation, 
-              and a student-led design studio. My main focus these days is
-              building accessible, inclusive products and digital experiences at
-              Upstatement for a variety of clients. I also recently launched a
-              course that covers everything you need to build a web app with the
-              Spotify API using Node & React. Here are a few technologies I’ve
-              been working with recently: JavaScript (ES6+) TypeScript */}
-              Hello ! <br />
-              This is wher you will find some content about me
-            </p>
+           <img src={me} alt="" className="w-full "/>
           </div>
         </div>
       </div>
