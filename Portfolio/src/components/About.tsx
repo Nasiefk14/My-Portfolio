@@ -2,7 +2,7 @@ import me from '../assets/me.jpeg'
 
 const About = () => {
   return (
-    <div className="about w-full h-full bg-[#05386B] text-[#edf5e1] pt-28">
+    <div className="about w-full h-full bg-[#05386B] text-[#edf5e1] pt-28 pb-48">
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
