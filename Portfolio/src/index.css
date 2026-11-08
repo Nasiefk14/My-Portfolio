@@ -1,40 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
   body {
-    @apply font-[Barlow];
+    @apply bg-canvas font-sans text-ink antialiased;
+    overflow-x: clip;
   }
-  li {
-    @apply px-4;
-    @apply cursor-pointer;
+  ::selection {
+    @apply bg-ink text-canvas;
   }
 }
-.HomeLogo {
-  width: 75px;
+
+@layer components {
+  /* White pill used for links, tags and socials */
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-sm text-ink shadow-pill transition hover:-translate-y-0.5;
+  }
+  /* Dark pill call-to-action */
+  .pill-dark {
+    @apply inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-canvas shadow-pill transition hover:-translate-y-0.5 hover:bg-black;
+  }
+  .heading {
+    @apply font-medium uppercase leading-none tracking-tight;
+  }
+  .text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px theme("colors.ink");
+  }
+  .field {
+    @apply w-full rounded-2xl border border-line bg-surface px-4 py-3 text-ink outline-none transition placeholder:text-muted focus:border-ink;
+  }
 }
-.strangeFont {
-  font-family: "Pacifico";
+
+/* Hero portrait: black and white, with a colour circle that follows the cursor */
+@property --spot {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0px;
 }
-.main-nav {
-  background-position: center;
-  background-size: 100% 100%;
+.spotlight {
+  --x: 50%;
+  --y: 30%;
+  transition: --spot 0.35s ease;
 }
-.main-nav:hover .overlay {
-  opacity: 3;
+.spotlight:hover {
+  --spot: 130px;
 }
-.overlay {
-  background-color: rgba(13, 29, 20, 0.432);
-  border-radius: 6px;
+.spotlight-colour {
+  -webkit-mask-image: radial-gradient(circle var(--spot) at var(--x) var(--y), #000 55%, transparent 100%);
+  mask-image: radial-gradient(circle var(--spot) at var(--x) var(--y), #000 55%, transparent 100%);
+}
+
+/* Scroll reveal, toggled by useReveal */
+.reveal {
   opacity: 0;
-  transition: opacity 0.5s ease;
-  width: 100%;
-  height: 100%;
-  line-height:100px;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
-.code{
-  padding-top: 15px
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

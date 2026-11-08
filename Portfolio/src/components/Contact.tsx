@@ -1,20 +1,44 @@
-import React from 'react'
+import { profile } from "../data";
+import { Arrow, AvailableBadge, Reveal } from "./ui";
 
-const Contact = () => {
-  return (
-    <div className='contact w-full h-screen bg-[#05386B] flex justify-center items-center p-4'>
-        <form action="https://getform.io/f/2375c45d-b671-4732-9d21-ba913639b7e7" method='POST' className='flex flex-col max-w-[600px] w-full'>
-            <div className="pb-8">
-                <p className='text-4xl font-bold inline border-b-4 border-[#5CDB95] text-[#edf5e1]'>Contact</p>
-                <p className='text-[#edf5e1] py-4'>Leave Your Details Below Or Reach Out To Me Via Email @ <b>Nasiefk14@gmail.com</b></p>
-            </div> 
-            <input type="text" name='name' placeholder='Name' className='bg-[#e9e1f5] p-2 placeholder:font-bold'/>
-            <input type="text" name='email' placeholder='Email Address' className='my-4 p-2 bg-[#e9e1f5] placeholder:font-bold'/>
-            <textarea name="message" placeholder='  Lets Hear Your Thoughts...' rows={10} className='bg-[#e9e1f5] placeholder:font-bold' ></textarea>
-            <button className='text-[#edf5e1] border-2 hover:bg-[#5CDB95] hover:border-[#5CDB95] hover:font-bold px-3 py-3 my-8 mx-auto items-cenetr'>Lets Connect!</button>
-        </form>
-    </div>
-  )
-}
+const Contact = () => (
+  <section id="contact" className="bg-gradient-to-b from-canvas to-surface px-4 py-32 sm:px-6">
+    <Reveal className="mx-auto max-w-2xl text-center">
+      <AvailableBadge label={profile.available} />
+      <h2 className="heading mt-6 text-[clamp(2.25rem,6vw,3.75rem)] font-semibold">Have a project in mind?</h2>
+      <p className="mx-auto mt-4 max-w-md text-muted">
+        Let's build something clear and useful together. Send a message below or email me at{" "}
+        <a href={`mailto:${profile.email}`} className="text-ink underline underline-offset-4">
+          {profile.email}
+        </a>
+        .
+      </p>
 
-export default Contact
+      <form
+        action="https://getform.io/f/2375c45d-b671-4732-9d21-ba913639b7e7"
+        method="POST"
+        className="mt-10 grid gap-4 text-left sm:grid-cols-2"
+      >
+        <label className="block">
+          <span className="mb-1.5 block text-sm font-medium">Name</span>
+          <input type="text" name="name" required autoComplete="name" placeholder="Your name" className="field" />
+        </label>
+        <label className="block">
+          <span className="mb-1.5 block text-sm font-medium">Email</span>
+          <input type="email" name="email" required autoComplete="email" placeholder="you@example.com" className="field" />
+        </label>
+        <label className="block sm:col-span-2">
+          <span className="mb-1.5 block text-sm font-medium">Message</span>
+          <textarea name="message" required rows={5} placeholder="Tell me about your project..." className="field resize-y" />
+        </label>
+        <div className="text-center sm:col-span-2">
+          <button type="submit" className="pill-dark mt-2">
+            Contact Me <Arrow />
+          </button>
+        </div>
+      </form>
+    </Reveal>
+  </section>
+);
+
+export default Contact;

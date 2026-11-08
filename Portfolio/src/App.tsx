@@ -1,20 +1,27 @@
-import About from './components/About'
-import Code from './components/Code'
-import Landing from './components/Landing'
-import Navbar from './components/Navbar'
-import Contact from './components/Contact'
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Work from "./components/Work";
+import Services from "./components/Services";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
-
   return (
-    <div>
+    <>
       <Navbar />
-      <Landing />
-      <About />
-      <Code />
-      <Contact />
-    </div>
-  )
+      <main>
+        <Hero />
+        <About />
+        <Work />
+        <Services />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;

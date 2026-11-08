@@ -1,34 +1,38 @@
-import me from '../assets/me.jpeg'
+import { profile } from "../data";
+import { Reveal, SectionTitle } from "./ui";
 
-const About = () => {
-  return (
-    <div className="about w-full h-full bg-[#05386B] text-[#edf5e1] pt-28 pb-48">
-      <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
-          <div className="sm:text-right pb-8 pl-4">
-            <p className="sm:text-5xl text-3xl font-bold inline border-b-4 border-[#5CDB95]">
-              About Me
-            </p>
-          </div>
-          <div></div>
-        </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl">
-            <p className='text-base'>
-            Hello, I'm Nasief Khan, a skilled Javascript developer with a passion for web development. With over 4 years of experience in software development, I have a solid foundation in C# and have since shifted my focus to Javascript and Typescript. I have honed my skills through building a variety of web applications and projects, and I am constantly seeking to learn and master new, in-demand technologies.
-<br /><br />
-On this website, you'll find a small preview of my abilities and projects that I have built. My main focus is currently on Fullstack Development, where I aim to strengthen my skills and work with the latest technologies. I am committed to creating high-quality, functional, and visually appealing web applications.
-<br /><br />
-Thank you for visiting my website, and please feel free to reach out to me with any questions or inquiries
-            </p>
-          </div>
-          <div>
-           <img src={me} alt="" className="w-full "/>
-          </div>
-        </div>
+const stack = ["TypeScript", "Node.js", "Express", "React", "Svelte", "PostgreSQL", "MongoDB", "Tailwind CSS", "Playwright", "Docker", "Claude Code"];
+
+const About = () => (
+  <section id="about" className="mx-auto max-w-6xl px-4 pt-28 sm:px-6">
+    <Reveal className="grid gap-10 md:grid-cols-[1fr_1.4fr]">
+      <div>
+        <SectionTitle title="About" watermark="About" />
+        <p className="relative mt-6 text-sm text-muted">Based in {profile.location}</p>
       </div>
-    </div>
-  );
-};
+      <div className="space-y-5 text-lg leading-relaxed text-muted">
+        <p>
+          <span className="text-ink">I'm {profile.firstName}, a software engineer</span> with {profile.yearsExperience}{" "}
+          years of experience. For over four years I built and supported production systems at Wyzetalk, a
+          mobile-first platform used by about 500,000 frontline workers, delivering integrations and features for
+          20+ enterprise clients in retail, mining and automotive manufacturing.
+        </p>
+        <p>
+          I take work from API contract through to go-live, own production incidents and work directly with client
+          IT teams when things get tricky. Lately I designed, built and launched Carbon Invoices, a multi-tenant
+          invoicing SaaS, using an AI-assisted workflow where every change is specified, reviewed and tested.
+        </p>
+        <p className="text-base">Away from the keyboard: speedcubing, welding, gaming and cars.</p>
+        <ul className="flex flex-wrap gap-2 pt-2">
+          {stack.map((s) => (
+            <li key={s} className="rounded-full border border-line px-3 py-1 text-sm text-ink">
+              {s}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Reveal>
+  </section>
+);
 
 export default About;
