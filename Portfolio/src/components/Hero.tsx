@@ -1,4 +1,3 @@
-import { useRef, type PointerEvent } from "react";
 import portrait from "../assets/portrait-cutout.webp";
 import { profile, socials } from "../data";
 import { Arrow, icons } from "./ui";
@@ -25,24 +24,12 @@ const SocialList = () => (
   </ul>
 );
 
-/** Black and white cut-out portrait; a circle of colour follows the cursor. */
-const Portrait = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const onMove = (e: PointerEvent<HTMLDivElement>) => {
-    const el = ref.current;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    el.style.setProperty("--x", `${e.clientX - r.left}px`);
-    el.style.setProperty("--y", `${e.clientY - r.top}px`);
-  };
-
-  return (
-    <div ref={ref} onPointerMove={onMove} onPointerDown={onMove} className="spotlight relative z-10 w-[min(90vw,30rem)] touch-pan-y">
-      <img src={portrait} alt={`Portrait of ${profile.firstName} ${profile.lastName}`} className="block w-full grayscale" />
-      <img src={portrait} alt="" aria-hidden className="spotlight-colour pointer-events-none absolute inset-0 w-full" />
-    </div>
-  );
-};
+/** Cut-out portrait that overlaps the bottom of the name. */
+const Portrait = () => (
+  <div className="relative z-10 w-[min(90vw,30rem)]">
+    <img src={portrait} alt={`Portrait of ${profile.firstName} ${profile.lastName}`} className="block w-full" />
+  </div>
+);
 
 const Hero = () => (
   <section id="top" className="relative overflow-hidden bg-surface pt-24 sm:pt-28">
@@ -61,7 +48,7 @@ const Hero = () => (
           </a>
         </div>
 
-        <div className="order-1 -mt-[6vw] flex justify-center md:order-2 md:-mt-[7rem]">
+        <div className="order-1 -mt-[2vw] flex justify-center md:order-2 md:-mt-6">
           <Portrait />
         </div>
 

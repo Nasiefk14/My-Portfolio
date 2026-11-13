@@ -38,25 +38,6 @@
   }
 }
 
-/* Hero portrait: black and white, with a colour circle that follows the cursor */
-@property --spot {
-  syntax: "<length>";
-  inherits: true;
-  initial-value: 0px;
-}
-.spotlight {
-  --x: 50%;
-  --y: 30%;
-  transition: --spot 0.35s ease;
-}
-.spotlight:hover {
-  --spot: 130px;
-}
-.spotlight-colour {
-  -webkit-mask-image: radial-gradient(circle var(--spot) at var(--x) var(--y), #000 55%, transparent 100%);
-  mask-image: radial-gradient(circle var(--spot) at var(--x) var(--y), #000 55%, transparent 100%);
-}
-
 /* Scroll reveal, toggled by useReveal */
 .reveal {
   opacity: 0;
